@@ -16,7 +16,7 @@ namespace Rance10SaveDataSwicher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormRance10SaveDataSwicher());
         }
     }
 }
