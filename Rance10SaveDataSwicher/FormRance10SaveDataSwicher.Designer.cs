@@ -63,14 +63,14 @@
             this.txtSaveDataDir.Name = "txtSaveDataDir";
             this.txtSaveDataDir.ReadOnly = true;
             this.txtSaveDataDir.Size = new System.Drawing.Size(368, 19);
-            this.txtSaveDataDir.TabIndex = 2;
+            this.txtSaveDataDir.TabIndex = 1;
             // 
             // btnSaveDataDirRef
             // 
             this.btnSaveDataDirRef.Location = new System.Drawing.Point(98, 12);
             this.btnSaveDataDirRef.Name = "btnSaveDataDirRef";
             this.btnSaveDataDirRef.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveDataDirRef.TabIndex = 1;
+            this.btnSaveDataDirRef.TabIndex = 0;
             this.btnSaveDataDirRef.Text = "Ref";
             this.btnSaveDataDirRef.UseVisualStyleBackColor = true;
             this.btnSaveDataDirRef.Click += new System.EventHandler(this.btnSaveDataDirRef_Click);
@@ -93,7 +93,7 @@
             this.lstBackupDir.Location = new System.Drawing.Point(12, 68);
             this.lstBackupDir.Name = "lstBackupDir";
             this.lstBackupDir.Size = new System.Drawing.Size(173, 184);
-            this.lstBackupDir.TabIndex = 1;
+            this.lstBackupDir.TabIndex = 0;
             this.lstBackupDir.DoubleClick += new System.EventHandler(this.lstBackupDir_DoubleClick);
             // 
             // btnBackup
@@ -101,7 +101,7 @@
             this.btnBackup.Location = new System.Drawing.Point(191, 68);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(75, 23);
-            this.btnBackup.TabIndex = 2;
+            this.btnBackup.TabIndex = 3;
             this.btnBackup.Text = "<- Backup";
             this.btnBackup.UseVisualStyleBackColor = true;
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
@@ -111,7 +111,7 @@
             this.btnRestore.Location = new System.Drawing.Point(191, 132);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(75, 23);
-            this.btnRestore.TabIndex = 3;
+            this.btnRestore.TabIndex = 5;
             this.btnRestore.Text = "-> Restore";
             this.btnRestore.UseVisualStyleBackColor = true;
             this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
@@ -121,14 +121,14 @@
             this.txtBackupDirName.Location = new System.Drawing.Point(321, 68);
             this.txtBackupDirName.Name = "txtBackupDirName";
             this.txtBackupDirName.Size = new System.Drawing.Size(238, 19);
-            this.txtBackupDirName.TabIndex = 4;
+            this.txtBackupDirName.TabIndex = 2;
             // 
             // btnNow
             // 
             this.btnNow.Location = new System.Drawing.Point(272, 68);
             this.btnNow.Name = "btnNow";
             this.btnNow.Size = new System.Drawing.Size(43, 23);
-            this.btnNow.TabIndex = 5;
+            this.btnNow.TabIndex = 1;
             this.btnNow.Text = "Now";
             this.btnNow.UseVisualStyleBackColor = true;
             this.btnNow.Click += new System.EventHandler(this.btnNow_Click);
@@ -138,7 +138,7 @@
             this.btnMove.Location = new System.Drawing.Point(191, 97);
             this.btnMove.Name = "btnMove";
             this.btnMove.Size = new System.Drawing.Size(75, 23);
-            this.btnMove.TabIndex = 6;
+            this.btnMove.TabIndex = 4;
             this.btnMove.Text = "<- Move";
             this.btnMove.UseVisualStyleBackColor = true;
             this.btnMove.Click += new System.EventHandler(this.btnMove_Click);

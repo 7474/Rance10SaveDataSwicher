@@ -81,7 +81,8 @@ namespace Rance10SaveDataSwicher
 
         private void lstBackupDir_DoubleClick(object sender, EventArgs e)
         {
-            Process.Start("EXPLORER.EXE", lstBackupDir.SelectedValue as string);
+            //Process.Start("EXPLORER.EXE", lstBackupDir.SelectedValue as string);
+            BackupName = lstBackupDir.Text;
         }
 
         private void btnBackup_Click(object sender, EventArgs e)
@@ -104,20 +105,24 @@ namespace Rance10SaveDataSwicher
             var buckupDir = Path.Combine(SaveDataDir, BackupName);
             if (Directory.Exists(buckupDir))
             {
-                MessageBox.Show("バックアップフォルダが既に存在します。");
-                return;
+                if (MessageBox.Show(
+                    "バックアップフォルダが存在します。上書きしてよろしいですか？",
+                    "確認",
+                    MessageBoxButtons.OKCancel) != DialogResult.OK)
+                {
+                    return;
+                }
             }
             Directory.CreateDirectory(buckupDir);
             if (isMove)
             {
                 GetSaveDataFiles(SaveDataDir).ToList().ForEach(x => x.MoveTo(Path.Combine(buckupDir, x.Name)));
                 GetSaveDataThumbnailFiles(SaveDataDir).ToList().ForEach(x => x.MoveTo(Path.Combine(buckupDir, x.Name)));
-
             }
             else
             {
-                GetSaveDataFiles(SaveDataDir).ToList().ForEach(x => x.CopyTo(Path.Combine(buckupDir, x.Name)));
-                GetSaveDataThumbnailFiles(SaveDataDir).ToList().ForEach(x => x.CopyTo(Path.Combine(buckupDir, x.Name)));
+                GetSaveDataFiles(SaveDataDir).ToList().ForEach(x => x.CopyTo(Path.Combine(buckupDir, x.Name), true));
+                GetSaveDataThumbnailFiles(SaveDataDir).ToList().ForEach(x => x.CopyTo(Path.Combine(buckupDir, x.Name), true));
             }
             refreshBackupDir();
             MessageBox.Show("バックアップしました。");
