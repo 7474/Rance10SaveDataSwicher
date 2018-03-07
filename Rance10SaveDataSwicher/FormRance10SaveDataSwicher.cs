@@ -152,8 +152,8 @@ namespace Rance10SaveDataSwicher
             MessageBox.Show("レストアしました。");
         }
 
-        private Regex LocalSaveFilePattern = new Regex("^LocalSave[0-9]{2}.asd$");
-        private Regex LocalSaveThumbnailFilePattern = new Regex("^Thumb00[0-9]{2}.qnt");
+        private Regex LocalSaveFilePattern = new Regex("^LocalSave[0-9]{2,3}.asd$");
+        private Regex LocalSaveThumbnailFilePattern = new Regex("^Thumb0[0-9]{3}.qnt");
         private IEnumerable<FileInfo> GetSaveDataFiles(string dirPath)
         {
             var dirInfo = new DirectoryInfo(dirPath);
